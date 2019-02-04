@@ -1,0 +1,87 @@
+<style>
+  .form-field-request { display: inline-block; width: 60%; } 
+</style> 
+
+
+      <div class="section-header text-center contact-temp">
+        <h1>{{ page.title }}</h1>
+      </div>
+ 
+     <div class="rte">
+        <div class="side-nav">
+          <ul>
+           <a href="/pages/contact"><li class="btn-link">Contact<br>Us<div>▶</div> </li></a>
+            <a href="/pages/contact"><li class="btn-link">Request a<br>Brochure<div>▶</div> </li></a>
+             <a href="{{'PSA.pdf' | asset_url}}" target="_blank"><li class="btn-link">Download <br>Informational Booklet<div>▶</div> </li></a>
+            <a href="/pages/schedule"><li class="btn-link">Schedule an<br> Appointment<div>▶</div></li></a>
+            <a href="/pages/support"><li class="btn-link">Attend an Informational<br>Support Group<div>▶</div></li></a>
+          </ul>
+          <div class="appoint-side-nav">
+            <h3 style="margin-bottom:0;padding:10px;">Questions? Call us!</br>
+            (630) 654-2515</h3>
+          </div>
+        </div>
+	<div class="form-field-request">
+       <div class="contact-form form-vertical">
+        {% form 'contact' %}
+
+          {% if form.posted_successfully? %}
+            <p class="note form-success">
+              {{ 'contact.form.post_success' | t }}
+            </p>
+          {% endif %}
+
+          {{ form.errors | default_errors }}
+
+          <div class="grid grid--half-gutters">
+            <div class="grid__item medium-up--one-half">
+              <label for="ContactFormName">{{ 'contact.form.name' | t }}</label>
+              <input type="text" id="ContactFormName" name="contact[name]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+            </div>
+            <div class="grid__item medium-up--one-half">
+              <label for="ContactFormEmail" class="{% if form.errors contains 'email' %}label--error{% endif %}">{{ 'contact.form.email' | t }}</label>
+              <input type="email" id="ContactFormEmail" name="contact[email]" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}" class="{% if form.errors contains 'email' %}input--error{% endif %}">
+            </div>
+          </div>
+
+          <label for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label>
+          <input type="tel" id="ContactFormPhone" name="contact[phone]" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+
+          <div class="grid">
+            <div class="grid__item">
+              <label for="AddressAddress1New">Address</label>
+              <input type="text" id="AddressAddress1New" name="address[address1]" value="{{ form.address1 }}">
+
+            </div>
+          </div>
+
+          <div class="grid">
+            <div class="grid__item one-third">
+              <label for="AddressCityNew">{{ 'customer.addresses.city' | t }}</label>
+              <input type="text" id="AddressCityNew" name="address[city]" value="{{ form.city }}">
+            </div>
+
+            <div class="grid__item one-third">
+              <label for="AddressCountryNew">{{ 'customer.addresses.country' | t }}</label>
+              <select id="AddressCountryNew" name="address[country]" data-default="{{ form.country }}">{{ country_option_tags }}</select>
+            </div>
+            
+                <div class="grid__item one-third">
+          <label for="AddressZipNew">{{ 'customer.addresses.zip' | t }}</label>
+          <input type="text" id="AddressZipNew" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters">
+        </div>
+          </div>
+
+          <div id="AddressProvinceContainerNew" style="display:none">
+            <label for="AddressProvinceNew">{{ 'customer.addresses.province' | t }}</label>
+            <select id="AddressProvinceNew" name="address[province]" data-default="{{ form.province }}"></select>
+          </div>
+
+         
+            <label for="ContactFormMessage">{{ 'contact.form.message' | t }}</label>
+            <textarea rows="10" id="ContactFormMessage" name="contact[body]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+          <input type="submit" class="btn lightblue" value="{{ 'contact.form.submit' | t }}">
+
+        {% endform %}
+      </div>
+    </div>

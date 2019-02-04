@@ -1,0 +1,393 @@
+<style>
+  #atf-side  {
+    width: 33%;
+    max-width: 250px;
+    margin: 25px;
+    padding: 20px;
+    background: #0d5da3;
+    float: right;
+    margin-right: 5%;
+  }
+  
+   #ex-pop  {
+   display: inline-block;
+   position: absolute;
+   margin-top: -30%;
+   background-color: white;
+   width: 300px;
+   min-height: 250px;
+   margin-left: 39%;
+   border: 2px solid #0d5da3;
+   padding: 50px;
+   text-align: center;
+}
+ 
+ .close {
+   margin-top: -40px;
+   position: relative;
+   margin-bottom: calc(40px 12pt);
+   font-size: 12pt;
+   text-align: right;
+   margin-right: -30px;
+   font-weight: 600;
+   cursor: pointer; 
+}
+
+  
+  #initial-journy { margin-top: -20px; }
+
+  #atf-side h5, #atf-side p { color: white; }
+
+  #atf-main {
+    width: 40%;
+    padding: 70px 20px 20px 20px;
+    max-width: 300px;
+    display: inline-block;
+    float: right;
+    margin-right: 50px; 
+  }
+  
+  .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+  h1, h3 { text-align: center; }
+  
+  #testimonials h3 {
+    font-weight: lighter;
+    font-size: 16pt;
+  }
+  
+  #testimonials div {
+    display: inline-block;
+    width: 44%;
+    margin: 20px;
+    vertical-align: top; 
+    text-align: left; 
+  }
+
+  #testimonials img {
+    float: left;
+    margin-right: 20px;
+    width: 45%;
+  }
+
+  table {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-top: 50px;
+  }
+
+  .tw { width: 100%; } 
+  .info-box {
+    width: 250px;
+    display: inline-block;
+    padding: 28px;
+    background: white;
+    text-align: center;
+    margin: 10px;
+    height: 350px;
+    vertical-align: top; 
+  } 
+  h2 { text-transform: none !important; } 
+
+  .info-box h2, body .info-box p, .info-box a { color: black; } 
+
+  a { text-decoration: underline; } 
+
+  .info-box:hover{
+    -moz-box-shadow:    0 0 50px lightgray;
+    -webkit-box-shadow: 0 0 50px lightgray;
+    box-shadow:         0 0 50px lightgray;    
+  }
+
+  .info-box a {
+    font-size: 10pt;
+    width: 65%;
+    display: inline-block;
+}
+  p {
+    font-size: 12pt;
+    letter-spacing: normal;
+    color: black; 
+  }
+  
+  #testimonials p { margin-bottom: 10px; text-align: left; font-size: 10pt; } 
+   
+  .info-box h2 { letter-spacing: normal !important; } 
+  
+  #journey {
+    padding: 50px; 
+    width: 100%; 
+    background: #0d5da3; 
+  }
+  
+  #journey h1 { color: white; } 
+  
+  #atf { 
+    background: url("{{'CPC-Home-Image.jpg' | asset_url }}"); 
+    box-shadow: 0px 15px 25px darkgrey;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    height: 500px;
+    overflow: hidden;
+  }
+
+   .invis { visibility: hidden; }
+  
+  #atf h2, #atf h5, #atf h4, #atf p { color: white; text-transform: none;} 
+  
+  #atf img  {
+    width: 30%;
+    float: left;
+    margin-top: -85px;
+}
+  
+  #atf h2 {
+    font-weight: bolder;
+    letter-spacing: normal;
+    margin-top: 0;
+  }
+  
+  #atf-main p {
+    font-size: 10pt;
+    line-height: normal;
+    margin-top: -10px;
+    margin-left: 8px;
+}
+  
+  td a {
+    color: white;
+    font-size: 8pt;
+}
+  
+  h1 {
+    font-weight: 600;
+    letter-spacing: normal;
+  }
+  
+  section:not(:first-of-type) { margin-top: 25px; } 
+  
+  th,td { 
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+    font-size: 13pt; 
+  } 
+  
+  td a { color: white; } 
+  th:empty {
+  visibility: hidden;
+ }
+  
+  .sm {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+  .ma { margin: 0 auto; } 
+  body .main-content { padding-top: 0; } 
+  
+  .cpc-ap { font-weight: 700;}
+
+  .ar-journey {
+    font-size: 70pt;
+    color: #5e9ecd;
+    position: absolute;
+    margin-left: 200px;
+}
+
+  .circle { 
+    width: 15px; 
+    height: 15px;
+    display: inline-block; 
+    background: #0d5da3; 
+    margin: 25px 10px;
+    border-radius: 50%; 
+    cursor: pointer; 
+  }
+
+  .highlight { background: #5e9ecd; } 
+  #middle-journey { margin-top: 70px; }
+  #final-journey { margin-top: 140px; } 
+</style>
+
+<section id="atf" class="clearfix">
+  <div id="atf-side">
+  <h5>Meet Dr. Moran</h5>
+	<p>Providing guidance for over 20,000 men over the last 20 years</p>
+	<p>Research collaboration with Harvard Medical School, University of Maryland Cancer Center and Dana Farber Cancer Center</p>
+	<p>Dr. Moran is also the Medical Director of Radiation Oncology at DuPage Medical Group Cancer Center in Lisle, IL.</p>
+ </div>
+  <div id="atf-main">
+  <h2 id="atf-title">Straight Talk About Prostate Cancer</h2>
+  <h4 id="atf-subtitle">"As a cancer survivor, I understand the initial shock and emotion of cancer. I'm here to help you learn about prostate cancer treatments and if seed implant is a good fit for you and your family."</h4>
+  <h5 id="atf-intro">-Brian J. Moran, MD</h5>
+  <p>Medical Director, <br>Chicago Prostate Cancer Center</p>
+    
+   <div class="cta_text">
+	 <a href="/pages/prostate-cancer" class="a_cta"><button class="btn">Learn More</button></a>
+   </div>
+
+
+  <div id="sub-header-slides" style="display: none;"><h2></h2><h4></h4></div>
+</div>
+</section>
+     
+<div>  
+    
+  <center>
+    <div class="circle highlight main-slide" id="slide1" img-source="//cdn.shopify.com/s/files/1/2316/0095/t/1/assets/CPC-Home-Image.jpg?7844792783149817079"></div>
+    <div class="circle" id="slide2" img-source="//cdn.shopify.com/s/files/1/2316/0095/t/1/assets/building.jpg?17545526770728315187" img-caption="Welcome to the Chicago Prostate Cancer Center" img-subcaption="A One-Time, Outpatient, Minimally Surgical Prostate Cancer Treatment"></div> 
+    <div class="circle" id="slide3" img-source="//cdn.shopify.com/s/files/1/2316/0095/t/1/assets/reception.jpg?7845200647143113927" img-caption="Compassion, Quality, Expertise, and Commitment" img-subcaption="See why our minimally-invasive surgical treatment may be your best option"></div>
+    <div class="circle" id="slide4" img-source="//cdn.shopify.com/s/files/1/2316/0095/t/1/assets/center.jpg?16301856489799910333" img-caption="Commitment" img-subcaption="Our entire team includes physicians, physicists, nurses, radiology technologists, and insurance experts. Our goal is to provide our patients with comprehensive care from consultation through follow up support. "></div>
+  </center>
+
+</div>
+<script>
+  $('.circle').click(function(){
+    var imageSource = $(this).attr('img-source'); 
+    var caption = $(this).attr('img-caption'); 
+    var subCaption = $(this).attr('img-subcaption'); 
+    $(this).addClass('highlight').siblings().removeClass('highlight');
+    if (!$(this).hasClass('main-slide')){
+      $('#atf').children().not('#sub-header-slides').hide(); 
+//       $("#sub-header-slides h2").empty().text(caption);
+//       $("#sub-header-slides h4").empty().text(subCaption);
+//       $('#sub-header-slides').show();
+    }
+    else {
+      $('#atf').children().not('#sub-header-slides').show(); 
+//       $('#sub-header-slides').hide();
+    }
+    $('#atf').css("backgroundImage", "url(" + "'" + imageSource + "'" + ")"); 
+  });
+  
+  $(document).ready(function() {
+    var y = 1 
+    setInterval(function(){
+    var atfSlide = "#slide" + y
+    $(atfSlide).trigger('click');
+      if (y < 4) {
+      y += 1 
+      }
+      else {
+        y = 1 
+      }
+
+    }, 50000)
+   });
+       
+</script>
+<section id="brand-promise" style="padding: 50px 0;">
+  <h1>"TREATING PROSTATE CANCER WITH A FOCUS ON QUALITY OF LIFE"</h1>
+  
+ <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/DZAK4eXxGdE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </center> 
+  
+</section>
+   <div class="social">
+     <a href="https://www.facebook.com/ChicagoProstate"><img src="{{'fb-icon.png'| asset_url}}" class="soc-icon"/></a>
+     <a href="https://twitter.com/ChicagoProstate"><img src="{{'twitter-icon.png'| asset_url}}" class="soc-icon"/></a>
+     <a href="/blogs/news"><img src="{{'blog-icon.png'| asset_url}}" class="soc-icon"/></a>
+     <a href="https://www.youtube.com/user/ChicagoProstateCtr"><img src="{{'youtube-icon.png'| asset_url}}" class="soc-icon"/></a>
+  </div>
+<section id="journey">
+  <h1>Prostate Cancer Journey</h1>
+  <center>
+  <div class="info-box">
+    <div class="ar-journey" id="initial-journey">➡</div>
+    <h2>Early Signs and Symptoms</h2>
+    <p>In its early stages, prostate cancer may cause no symptoms. That's why regular testing is important for some men.</p>
+    <a href="/pages/prostate-cancer"  target="_blank" >Find out if you should be tested</a>
+  </div>
+   <div class="info-box">
+    <div class="ar-journey" id="middle-journey">➡</div>
+    <h2>Testing and Diagnosis</h2>
+    <p>A positive test result doesn't necessarily mean prostate cancer. Further testing can determine if it's cancer.</p>
+    <a href="/pages/diagnosis"  target="_blank" >What your test results mean</a>
+  </div>
+   <div class="info-box">
+    <div class="ar-journey" id="final-journey">➡</div>
+    <h2>Treatment <br> Options</h2>
+    <p>If you've been diagnosed with prostate cancer, choosing a course of treatment is a critical step.</p>
+    <a href="/pages/treatment-options"  target="_blank" >Get the facts and the latest research</a>
+  </div>
+   <div class="info-box">
+    <h2>Recovering from Prostate Cancer</h2>
+    <p>Congratulations! <br> You have completed your treatment! <br>But what is life like after prostate cancer?</p>
+    <a href="/pages/follow-up"  target="_blank" >What to expect after treatment</a>
+    </div>
+  </center>
+</section>
+
+<section id="testimonials">
+  <h1 style="margin: 1px;">Patient Testimonials</h1>
+  <h3>Don't just take our word for it.</h3>
+  <center>
+  <div>
+     <a href="/pages/testimonials"><img src="{{'man1.jpg'|asset_url}}" /></a>
+    <p><b>"I was convinced I'd be making a terrible mistake by not visiting you."</b></p>
+    <p>"I have to admit that I was prepared to have the DaVinci Prostatectomy after speaking with my urologist. In fact, even before meeting with you I was seriously considering canceling my appointment (consultation) with you..."</p>
+    <p>-Dave A.<br>
+    <i>Plainfield, Illinois</i></p>
+  </div>
+  <div>
+     <a href="/pages/testimonials"><img src="{{'man5.jpg'|asset_url}}" /></a>
+    <p><b>"A very efficient operation at the Center."</b></p>
+    <p>"Good, intelligent people who are above average compared to most hospitals/medical centers."</p>
+    <p>-Robert H.<br>
+    <i>Albuquerque, New Mexico</i></p>
+  </div>
+  <div>
+     <a href="/pages/testimonials"><img src="{{'man6.jpeg'|asset_url}}" /></a>
+    <p><b>"Thank you."</b></p>
+    <p>"Very pleased with the level of competence of the entire staff. I very much appreciated the professional and personal treatment I received."</p>
+    <p>-Herbert M.<br>
+    <i>Wheaton, Illinois</i></p>
+  </div>
+  <div>
+    <a href="/pages/testimonials"><img src="{{'man4.jpg'|asset_url}}" /></a>
+    <p><b>"Everything went better than I had imagined"</b></p>
+    <p>"Thanks to Dr. Moran and his entire staff for making everything so easy. Great instructions and information, they answered every question I had."</p>
+    <p>-Matthew D.<br>
+    <i>Schaumburg, Illinois</i></p>
+  </div> 
+  </center>
+</section>
+
+<section id="Table">
+  <center>
+  <div>
+     <img src="{{'Website_Table.jpg'|asset_url}}" />
+  </div>
+  </center>
+</section>
+
+<img class="tw" src="{{'CPC-Footer.jpg' | asset_url}}" />
+
+<script>
+  $('.close').click(function(){
+    $(this).parent().hide(); 
+  }); 
+  
+   $(document).ready(function(){
+ $("tr:even").css("background-color", "#5e9ecd");
+   $("tr:odd").css("background-color", "#0d5da3");
+});
+ 
+ $('.lm').click(function() {
+   $('#ex-pop').hide(); 
+   $('#ex-pop').fadeIn(); 
+ }); 
+ 
+ $(document).click(function() { 
+  if (!$('.lm').is(event.target) && (!$('#ex-pop').is(event.target)) )
+   {
+    $('#ex-pop').hide();
+   }
+ });
+</script>
