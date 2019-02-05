@@ -1,28 +1,53 @@
+<style>
+@media only screen and (max-width: 799px) {
+  .side-nav li div {
+    text-align: right;
+    margin-bottom: 0;
+    margin-right: 10px;
+    margin-top: -12pt;
+  }
+}
+</style>
 
-      <div class="section-header text-center prostate">
-        <h1>{{ page.title }}</h1>
-      </div>
+<div class="section-header text-center prostate flex-container-no">
+  <h1 class="fw">{{ page.title }}</h1>
+</div>
 
-      <div class="rte">
-        <div class="side-nav">
-          <ul>
-            <a href="/pages/prostate-cancer"><li class="btn-link">What is Prostate<br> Cancer?<div>▶</div></li></a>
-            <a href="/pages/understanding-your-psa"><li class="btn-link">Screening For<br> Prostate Cancer<div>▶</div></li></a>
-            <a href="/pages/diagnosis"><li class="btn-link">Prostate Cancer <br> Diagnosis<div>▶</div> </li></a>
-            <a href="/pages/treatment-options"><li class="btn-link">Second<br>Opinions<div>▶</div> </li></a>
-            <a href="/pages/faq"><li class="btn-link">Frequently Asked<br>Questions<br><div>▶</div></li></a>
-            <a href="/pages/myths"><li class="btn-link">Common<br>Myths<br><div>▶</div> </li></a>
-          </ul>
-          <div class="appoint-side-nav">
-            <a href="/pages/schedule"><div class="btn-link white">Make an Appointment</div></a>
-            <p>Schedule an in-person consultation with a prostate cancer specialist.</p>
-            <h3>Questions? Call us!</br>
-            (630) 654-2515</h3>
-         
-          </div>
-        </div>
-        <div class="main-text">
-        {{ page.content }}
-        </div>
-      </div>
+<div class="rte page-content">
+  <div class="side-nav do">
+    <ul>
+      <a href="/pages/prostate-cancer"><li class="btn-link">What is Prostate<br> Cancer?<div>▶</div></li></a>
+      <a href="/pages/understanding-your-psa"><li class="btn-link">Screening For<br> Prostate Cancer<div>▶</div></li></a>
+      <a href="/pages/diagnosis"><li class="btn-link">Prostate Cancer <br> Diagnosis<div>▶</div> </li></a>
+      <a href="/pages/treatment-options"><li class="btn-link">Second<br>Opinions<div>▶</div> </li></a>
+      <a href="/pages/faq"><li class="btn-link">Frequently Asked<br>Questions<br><div>▶</div></li></a>
+      <a href="/pages/myths"><li class="btn-link">Common<br>Myths<br><div>▶</div> </li></a>
+    </ul>
+    <div class="appoint-side-nav">
+      <a href="/pages/schedule"><div class="btn-link white">Make an Appointment</div></a>
+      <p>Schedule an in-person consultation with a prostate cancer specialist.</p>
+      <h3>Questions? Call us!</br>
+      (630) 654-2515</h3>
+    </div>
+  </div>
+  <div class="main-text">
+    {{ page.content }}
+  </div>
+  <div class="side-nav mo">
+    <ul>
+      <a href="/pages/prostate-cancer"><li class="btn-link">What is Prostate Cancer?<div>▶</div></li></a>
+      <a href="/pages/understanding-your-psa"><li class="btn-link">Screening For Prostate Cancer<div>▶</div></li></a>
+      <a href="/pages/diagnosis"><li class="btn-link">Prostate Cancer Diagnosis<div>▶</div> </li></a>
+      <a href="/pages/treatment-options"><li class="btn-link">Second Opinions<div>▶</div> </li></a>
+      <a href="/pages/faq"><li class="btn-link">Frequently Asked Questions <div>▶</div></li></a>
+      <a href="/pages/myths"><li class="btn-link">Common Myths <div>▶</div> </li></a>
+    </ul>
+    <div class="appoint-side-nav">
+      <a href="/pages/schedule"><div class="btn-link white">Make an Appointment</div></a>
+      <p>Schedule an in-person consultation with a prostate cancer specialist.</p>
+      <h3>Questions? Call us!</br>
+      (630) 654-2515</h3>
+    </div>
+  </div>
+</div>
 
