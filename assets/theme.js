@@ -6,6 +6,32 @@ $('.rte a').each(function() {
     }
 })
 
+$(document).ready(function() {
+  headerSize()
+})
+$(window).on("resize", function() {
+  headerSize()
+})
+
+var headerSize = function() {
+  var bannerHeight = $('.announcement-bar__message').height() + 20
+  $('.site-header').css("margin-top", bannerHeight) 
+  var headerHeight = bannerHeight + $('.site-header').height()
+  console.log(headerHeight)
+  $('body .main-content').css("padding-top", headerHeight )
+}
+// hamburger nav
+$('#hamburger').click(function(){
+  $('.mobile-nav1').show().removeClass('slide-out').addClass('slide-in');
+  $('.index-sections, main, header, footer, #banner-cta, .modal').addClass('darken')
+  $('body').addClass('freeze-frame')
+});
+$('#hamburger-close span').click(function() {
+    $('.mobile-nav1').removeClass('slide-in').addClass('slide-out');
+    $('body').removeClass('freeze-frame')
+
+  $('.index-sections, main, header, footer, #banner-cta, .modal').removeClass('darken')
+})
 
 window.theme = window.theme || {};
 
