@@ -8,7 +8,71 @@ body .medium-up--one-half {
     a { text-decoration: underline !important; } 
   }
   body .site-header__icons { display: none !important; } 
+} 
+
+@media only screen and (max-width: 799px) {
+  .page-content .do { display: none; }
+  .side-nav {
+    width: 100%;
+    vertical-align: top;
+    font-size: 10pt;
+  } 
+  .page-content { padding: 20px; }
+  .rte ul, .rte ol { margin: 20px 0 !important;}
+   .main-text {width: 100%; }
+   .appoint-side-nav { margin: 0 !important;}
+  .section-header { 
+    height: 200px;
+    padding: 20px;
+  }
+  .side-nav li div { margin-top: -12pt;}
 }
+
+@media only screen and (min-width: 800px) {
+  .page-content .mo { display: none; }
+  .side-nav {
+    width: 30%;
+    margin-right: 4%;
+    font-size: 14pt;
+  }
+  .side-nav li div { 
+    text-align: right;
+    margin-top: -12%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+ .main-text {
+    width: 65%;
+    padding-bottom: 50px; 
+  }
+  .section-header { 
+    height: 30vh;
+    padding: 50px;
+  }
+  .rte ul, .rte ol, .appoint-side-nav { margin: 0 0 50px 35px;}
+  .page-content { padding: 50px; }
+  p {
+    font-size: 14pt;
+    width: 90%;
+  }  
+}
+.fw { width: 100%; }
+.tac { text-align: center; }
+.flex-container-no { 
+  display: flex; 
+  align-items: center;
+}
+.side-nav {
+  vertical-align: top; 
+  display: inline-block;
+}
+.main-text { display: inline-block; }
+.section-header {margin-bottom: 0px !important;}
+body main .rte li { list-style-position: inside !important; }
+.side-nav li div { text-align: right;}
+
+
+
 
 .current { background-color: #696969 !important;  }
 
@@ -20,7 +84,6 @@ body .form-vertical [type="submit"], .form-vertical .btn {
     width: 100%;
     color: white;
     padding: 20px;
-    margin-bottom: 50px;
 } 
 .one-third {width: 33%; } 
 body .rte .appoint-side-nav p { color: white !important; } 
@@ -122,9 +185,7 @@ body .grid--table>.grid__item {
   max-width: 1366px; 
   margin: 0 auto; 
 }
-.rte ul, .rte ol, .appoint-side-nav {
-  margin: 0 0 50px 35px;
-}
+
 .patients {background: url("{{'CPC-Page-Image.jpg'|asset_url}}"); }
 .treatment {background: url("{{'header2.jpg'|asset_url}}"); }
 .prostate {background: url("{{'header3.jpg'|asset_url}}"); }
@@ -134,23 +195,15 @@ body .grid--table>.grid__item {
       .section-header {
     background-repeat: no-repeat;
     background-size: cover; 
-    padding: 120px;
     color: white;
     width: 100%;
-    height: 0;
     background-position: center;
 }
 
       p {
         color: black;
-        font-size: 14pt;
-        width: 90%;
         }  
-      .main-text {
-        width: 65%;
-        display: inline-block;
-        padding-bottom: 50px; 
-        }
+ 
 
 .rte img {
     height: auto;
@@ -161,21 +214,9 @@ body .grid--table>.grid__item {
 body .pagination { margin-bottom: 50px; }
 
   
-.side-nav li div { 
-    text-align: right;
-    margin-top: -12%;
-    margin-bottom: 10px;
-    margin-right: 10px;
-}
 
 #shopify-section-blog-template .section-header h1, #shopify-section-article-template .section-header { color: black !important; }
-.side-nav{
-    width: 30%;
-    display: inline-block;
-    margin-right: 4%;
-    vertical-align: top;
-    font-size: 14pt;
-}
+
 
 .article__author { display: none !important; }
   
@@ -193,7 +234,6 @@ body header a { text-decoration: none; margin-left: 15px; }
 
 body .site-footer {
     margin: 0;
-    margin-top: -10px;
     background-color: #0d5da3;
   padding: 50px;
   color: white; 

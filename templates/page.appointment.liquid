@@ -1,25 +1,32 @@
 <style>
+@media only screen and (min-width: 800px) {
   .form-field-request { display: inline-block; width: 60%; } 
+}
+@media only screen and (max-width: 799px) {
+  .form-field-request {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    min-width: 320px;
+  }
+}
 </style> 
-
-
-      <div class="section-header text-center appointment-temp">
-        <h1>{{ page.title }}</h1>
-      </div>
- 
-     <div class="rte">
-        <div class="side-nav">
-          <ul>
-            <a href="/pages/contact"><li class="btn-link">Contact<br>Us<div>▶</div></li></a>
-            <a href="/pages/brochure"><li class="btn-link">Request a<br>Brochure<div>▶</div> </li></a>
-            <a href="/pages/schedule"><li class="btn-link">Schedule an<br> Appointment<div>▶</div></li></a>
-            <a href="/pages/support"><li class="btn-link">Attend an Informational<br> Support Group<div>▶</div></li></a>
-          </ul>
-          <div class="appoint-side-nav">
-            <h3 style="margin-bottom:0;padding:10px;">Questions? Call us!</br>
-            (630) 654-2515</h3>
-          </div>
-        </div>
+<div class="section-header text-center appointment-temp flex-container-no">
+  <h1 class="fw">{{ page.title }}</h1>
+</div>
+<div class="rte page-content">
+  <div class="side-nav do">
+    <ul>
+      <a href="/pages/contact"><li class="btn-link">Contact<br>Us<div>▶</div></li></a>
+      <a href="/pages/brochure"><li class="btn-link">Request a<br>Brochure<div>▶</div> </li></a>
+      <a href="/pages/schedule"><li class="btn-link">Schedule an<br> Appointment<div>▶</div></li></a>
+      <a href="/pages/support"><li class="btn-link">Attend an Informational<br> Support Group<div>▶</div></li></a>
+    </ul>
+    <div class="appoint-side-nav">
+      <h3 style="margin-bottom:0;padding:10px;">Questions? Call us!</br>
+      (630) 654-2515</h3>
+    </div>
+  </div>
 	<div class="form-field-request">
       <div class="contact-form form-vertical">
         {% form 'contact' %}
@@ -63,7 +70,7 @@
             </div>
             
                 <div class="grid__item one-third">
-          <label for="AddressZipNew">{{ 'customer.addresses.zip' | t }}</label>
+          <label for="AddressZipNew">Zip Code</label>
           <input type="text" id="AddressZipNew" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters">
         </div>
           </div>
@@ -99,3 +106,15 @@
         {% endform %}
       </div>
     </div>
+      <div class="side-nav mo">
+    <ul>
+      <a href="/pages/contact"><li class="btn-link">Contact Us / Request a Brochure<div>▶</div></li></a>
+       <a href="{{'PSA.pdf' | asset_url}}" target="_blank"><li class="btn-link">Download Informational Booklet<div>▶</div> </li></a>
+      <a href="/pages/schedule"><li class="btn-link">Schedule an Appointment<div>▶</div></li></a>
+      <a href="/pages/support"><li class="btn-link">Attend an Informational Support Group<div>▶</div></li></a>
+    </ul>
+    <div class="appoint-side-nav">
+      <h3 style="margin-bottom:0;padding:10px;">Questions? Call us!</br>
+      (630) 654-2515</h3>
+    </div>
+  </div>

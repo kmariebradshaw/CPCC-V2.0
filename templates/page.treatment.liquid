@@ -1,28 +1,50 @@
+<style>
+@media only screen and (max-width: 799px) {
+  .side-nav li div {
+    text-align: right;
+    margin-bottom: 0;
+    margin-right: 10px;
+    margin-top: -12pt;
+  }
+}
+</style>
+<div class="section-header text-center treatment flex-container-no">
+  <h1 class="fw">{{ page.title }}</h1>
+</div>
 
-      <div class="section-header text-center treatment">
-        <h1>{{ page.title }}</h1>
-      </div>
-
-      <div class="rte">
-        <div class="side-nav">
-          <ul>
-            <a href="/pages/prostate-biopsy"><li class="btn-link">Prostate<br>Biopsy<br><div>▶</div> </li></a>
-            <a href="/pages/brachytherapy"><li class="btn-link">LDR Brachytherapy<br>Procedure<div>▶</div> </li></a>
-            <a href="/pages/focal-therapy"><li class="btn-link">Focal<br>Therapy<br><div>▶</div> </li></a>
-            <a href="/pages/active-surveillance"><li class="btn-link">Active<br>Surveillance<br><div>▶</div> </li></a>
-          </ul>
-          <div class="appoint-side-nav">
-            <a href="/pages/schedule"><div class="btn-link white">Make an Appointment</div></a>
-            <p>Schedule an in-person consultation with a prostate cancer specialist.</p>
-            <h3>Questions? Call us!</br>
-            (630) 654-2515</h3>
-         
-          </div>
-        </div>
-        <div class="main-text">
-        {{ page.content }}
-        </div>
-      </div>
+<div class="rte page-content">
+  <div class="side-nav do">
+    <ul>
+      <a href="/pages/prostate-biopsy"><li class="btn-link">Prostate<br>Biopsy<br><div>▶</div> </li></a>
+      <a href="/pages/brachytherapy"><li class="btn-link">LDR Brachytherapy<br>Procedure<div>▶</div> </li></a>
+      <a href="/pages/focal-therapy"><li class="btn-link">Focal<br>Therapy<br><div>▶</div> </li></a>
+      <a href="/pages/active-surveillance"><li class="btn-link">Active<br>Surveillance<br><div>▶</div> </li></a>
+    </ul>
+    <div class="appoint-side-nav">
+      <a href="/pages/schedule"><div class="btn-link white">Make an Appointment</div></a>
+      <p>Schedule an in-person consultation with a prostate cancer specialist.</p>
+      <h3>Questions? Call us!</br>
+      (630) 654-2515</h3>
+    </div>
+  </div>
+  <div class="main-text">
+    {{ page.content }}
+  </div>
+  <div class="side-nav mo">
+    <ul>
+      <a href="/pages/prostate-biopsy"><li class="btn-link">Prostate Biopsy <div>▶</div> </li></a>
+      <a href="/pages/brachytherapy"><li class="btn-link">LDR Brachytherap Procedure<div>▶</div> </li></a>
+      <a href="/pages/focal-therapy"><li class="btn-link">Focal Therapy <div>▶</div> </li></a>
+      <a href="/pages/active-surveillance"><li class="btn-link">Active Surveillance <div>▶</div> </li></a>
+    </ul>
+    <div class="appoint-side-nav">
+      <a href="/pages/schedule"><div class="btn-link white">Make an Appointment</div></a>
+      <p>Schedule an in-person consultation with a prostate cancer specialist.</p>
+      <h3>Questions? Call us!</br>
+      (630) 654-2515</h3>
+    </div>
+  </div>
+</div>
 
 <script>
 window.addEventListener("hashchange", function () {
