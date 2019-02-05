@@ -42,7 +42,7 @@
 
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
     <ul class="mobile-nav1 accent-padding" style="display: none;">
-       <p class="nmt tar clickable" id="hamburger-close" style="font-size: 15pt;margin-right:5px;"><span>✕</span></p>
+       <p class="nmt tar clickable" id="hamburger-close" style="font-size: 15pt;margin-bottom: 7.5px"><span>✕</span></p>
         {% for link in linklists.main-menu.links %}
           {% assign child_list_handle = link.title | handleize %}
           {% if linklists[child_list_handle].links != blank %}  

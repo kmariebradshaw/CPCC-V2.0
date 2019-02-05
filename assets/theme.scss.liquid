@@ -33,8 +33,54 @@ body .medium-up--one-half {
     right: 35px;
     top: 38%;
   }
-}
+  .mobile-nav1  {
+    /**/
+    z-index: 99999999999999999999999999;
+    position: fixed;
+    top: 0;
+    background: #f2f4f7;
+    right: 0;
+    padding: 25px;
+    height: 100vh;
+    width: 45%;
+    min-width: 300px;
+    max-width: 450px;
+    overflow: scroll;
 
+            transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+  }
+}
+.mobile-nav1 li {
+    border-bottom: 1px solid #0d5da3;
+    padding: 10px 0;
+    cursor: pointer;
+    span {
+      font-size: 10pt;
+      font-family: 'Zapf Dingbats';
+      margin-top: 5px;
+      width: 16px;
+      float: right;
+      color: #0d5da3;
+  }
+}
+.freeze-frame { height: 100vh !important; overflow: hidden !important; }
+.darken {
+    position: relative;
+}
+.darken:after {
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 1;
+}
+header.darken {
+    border-bottom: 1px solid #696969 !important;
+}
 @media only screen and (min-width: 800px) {
   .page-content .mo { display: none; }
   .side-nav {
@@ -63,6 +109,7 @@ body .medium-up--one-half {
     width: 90%;
   }  
 }
+.tar { text-align: right; }
 .fw { width: 100%; }
 .tac { text-align: center; }
 .flex-container-no { 
@@ -148,6 +195,30 @@ body main .rte li { list-style-position: inside !important; }
   left: 50%;
 }
 
+.slide-in {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+.slide-out {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+}
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(100%); }
+}
+
+@-webkit-keyframes slide-out {
+    0% { -webkit-transform: translateX(0%); }
+    100% { -webkit-transform: translateX(100%); }
+}
 
 
 .current { background-color: #696969 !important;  }
@@ -4001,7 +4072,6 @@ h1.product-single__title {
   padding: 0 $gutter-site;
 
   @include media-query($small) {
-    border-bottom: 1px solid $color-border;
     padding: 0;
   }
 
