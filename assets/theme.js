@@ -19,6 +19,11 @@ var headerSize = function() {
   var headerHeight = bannerHeight + $('.site-header').height()
   $('body .main-content').css("padding-top", headerHeight )
 }
+$('.mobile-nav1 li').click(function() {
+  $(this).next('.childlink').slideToggle();
+  $(this).css(':after', 'transform:rotate(90deg)')
+  $(this).children('span').text($(this).children('span').text() == '◯' ? '⬤' : '◯')
+});
 // hamburger nav
 $('#hamburger').click(function(){
   $('.mobile-nav1').show().removeClass('slide-out').addClass('slide-in');
@@ -49,7 +54,6 @@ $('body').click(function (event) {
       $('header, main, footer, #banner-cta, .index-sections, .mobile-nav1, .announcement-bar__message').removeClass('darken');
    }    
 });
-
 window.theme = window.theme || {};
 
 /* ================ SLATE ================ */
