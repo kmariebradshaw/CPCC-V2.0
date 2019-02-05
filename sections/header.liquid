@@ -41,86 +41,23 @@
 {% endif %}
 
 <div data-section-id="{{ section.id }}" data-section-type="header-section">
-  <nav class="mobile-nav-wrapper medium-up--hide" role="navigation">
-    <ul id="MobileNav" class="mobile-nav">
-      {% for link in linklists[section.settings.main_linklist].links %}
-        {%- assign child_list_handle = link.title | handleize -%}
+    <ul class="mobile-nav1 accent-padding mo" style="display: none;">
+       <p class="nmt tar clickable" id="hamburger-close" style="font-size: 15pt;margin-bottom: 7.5px"><span>✕</span></p>
+        {% for link in linklists.main-menu.links %}
+          {% assign child_list_handle = link.title | handleize %}
+          {% if linklists[child_list_handle].links != blank %}  
+            <li class="collection-prod">{{ link.title | escape }} <span>◯</span>           </li> 
 
-        <li class="mobile-nav__item{% unless forloop.last %} border-bottom{% endunless %}">
-          {% if linklists[child_list_handle].links != blank %}
-            <button type="button" class="btn--link js-toggle-submenu mobile-nav__link" data-target="{{ child_list_handle }}" data-level="1">
-              {{ link.title }}
-              <div class="mobile-nav__icon">
-                {% include 'icon-chevron-right' %}
-                <span class="icon__fallback-text">{{ 'layout.navigation.expand' | t }}</span>
-              </div>
-            </button>
-            <ul class="mobile-nav__dropdown" data-parent="{{ child_list_handle }}" data-level="2">
-              <li class="mobile-nav__item border-bottom">
-                <div class="mobile-nav__table">
-                  <div class="mobile-nav__table-cell mobile-nav__return">
-                    <button class="btn--link js-toggle-submenu mobile-nav__return-btn" type="button">
-                      {% include 'icon-chevron-left' %}
-                      <span class="icon__fallback-text">{{ 'layout.navigation.collapse' | t }}</span>
-                    </button>
-                  </div>
-                  <a href="{{ link.url }}" class="mobile-nav__sublist-link mobile-nav__sublist-header">
-                    {{ link.title }}
-                  </a>
-                </div>
-              </li>
-
+             <ul class="childlink accent-padding" style="display: none;">
               {% for childlink in linklists[child_list_handle].links %}
-                {% assign grand_child_list_handle = childlink.title | handle %}
-
-                <li class="mobile-nav__item{% unless forloop.last %} border-bottom{% endunless %}">
-                  {% if linklists[grand_child_list_handle].links != blank %}
-                    <button type="button" class="btn--link js-toggle-submenu mobile-nav__link mobile-nav__sublist-link" data-target="{{ grand_child_list_handle }}">
-                      {{ childlink.title }}
-                      <div class="mobile-nav__icon">
-                        {% include 'icon-chevron-right' %}
-                        <span class="icon__fallback-text">{{ 'layout.navigation.expand' | t }}</span>
-                      </div>
-                    </button>
-                    <ul class="mobile-nav__dropdown" data-parent="{{ grand_child_list_handle }}" data-level="3">
-                      <li class="mobile-nav__item border-bottom">
-                        <div class="mobile-nav__table">
-                          <div class="mobile-nav__table-cell mobile-nav__return">
-                            <button type="button" class="btn--link js-toggle-submenu mobile-nav__return-btn" data-target="{{ child_list_handle }}">
-                              {% include 'icon-chevron-left' %}
-                              <span class="icon__fallback-text">{{ 'layout.navigation.collapse' | t }}</span>
-                            </button>
-                          </div>
-                          <a href="{{ childlink.url }}" class="mobile-nav__sublist-link mobile-nav__sublist-header">
-                            {{ childlink.title }}
-                          </a>
-                        </div>
-                      </li>
-                      {% for grandchildlink in linklists[grand_child_list_handle].links %}
-                        <li class="mobile-nav__item{% unless forloop.last %} border-bottom{% endunless %}">
-                          <a href="{{ grandchildlink.url }}" class="mobile-nav__sublist-link">
-                            {{ grandchildlink.title | escape }}
-                          </a>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                  {% else %}
-                    <a href="{{ childlink.url }}" class="mobile-nav__sublist-link">
-                      {{ childlink.title | escape }}
-                    </a>
-                  {% endif %}
-                </li>
+                <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
               {% endfor %}
-            </ul>
+             </ul>
           {% else %}
-            <a href="{{ link.url }}" class="mobile-nav__link">
-              {{ link.title }}
-            </a>
+            <li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
           {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
+        {% endfor %}
+      </ul>
 
       <style>
         .announcement-bar {
@@ -200,7 +137,8 @@
       </div>
 
       {% if section.settings.align_logo == 'left' %}
-        <nav class="grid__item medium-up--one-half small--hide" id="AccessibleNav" role="navigation">
+        <nav class="grid__item medium-up--one-half small--hide do" id="AccessibleNav" role="navigation">
+          <div class="desktop-nav">
           <ul>
           <li><a href="/pages/about-us" class="main-nav">About</a>
               <ul class="sub-nav-main">
@@ -248,18 +186,18 @@
             </li>
           </ul>
       <a href="/pages/contact" class="btn-link">Contact Us</a>
+    </div>
       </nav>
       {% endif %}
 
       <div class="grid__item small--one-half {% if section.settings.align_logo == 'left' %}medium-up--one-quarter{% else %}medium-up--one-third{% endif %} text-right site-header__icons{% if shop.customer_accounts_enabled %} site-header__icons--plus{% endif %}">
 
-          {% unless linklists[section.settings.main_linklist] == blank %}
-            <button type="button" class="btn--link site-header__menu js-mobile-nav-toggle mobile-nav--open">
-              {% include 'icon-hamburger' %}
-              {% include 'icon-close' %}
-              <span class="icon__fallback-text">{{ 'layout.navigation.toggle' | t }}</span>
-            </button>
-          {% endunless %}
+           <div id="hamburger" >
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
         </div>
 
       </div>
