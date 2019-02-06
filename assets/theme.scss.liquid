@@ -1,7 +1,10 @@
 @media only screen and (max-width: 400px) {
   .announcement-bar__message { font-size: 10pt !important;}
 }
-
+#brand-promise + .social {
+      width: 100%;
+    text-align: center;
+}
 @media only screen and (min-width: 750px) {
   .social { width: 33%;}
   .social .btn-link  { margin-left: -30px; }
@@ -23,6 +26,7 @@
   body .site-header__icons { display: none !important; } 
 }
 
+.ar-journey img { max-width: 100px; }
 @media only screen and (max-width: 749px) {
   #footer-main-content { width: 100% !important; }
   .social { width: 100%;}
@@ -30,6 +34,21 @@
    .site-footer ul {
     width: 100%;
   }
+}
+@media only screen and (min-width: 1200px) {
+    #final-journey { margin-top: 140px; } 
+    #atf-main { margin-right: 50px;  }
+
+}
+@media only screen and (min-width: 800px) and (max-width: 1199px) {
+  #journey .info-wrapper { max-width: 700px; margin: 0 auto; }
+  #initial-journey img, #final-journey { margin-top: 90px; }
+  #middle-journey  {
+    margin-left: -100px;
+    margin-top: 247px !important;
+    transform: rotate(-220deg);
+  }
+
 }
 @media only screen and (min-width: 450px) and (max-width: 749px) {
   .site-footer ul li a { font-size: 10pt; }
@@ -124,9 +143,20 @@ iframe { max-width: 100%; }
 header.darken {
     border-bottom: 1px solid #696969 !important;
 }
+@media only screen and (min-width: 1000px) {
+  .flex-container-do {
+    display: flex;
+    align-items: center;
+  }
+    #testimonials .flex-container div, #testimonials .flex-container-do div {
+    width: 50%;
+  }
+}
 @media only screen and (min-width: 1100px) {
   body header a { margin-left: 15px; } 
-
+}
+@media only screen and (min-width: 800px) and (max-width: 999px) {
+   #testimonials .flex-container div { width: 50%; }
 }
 @media only screen and (min-width: 750px) and (max-width: 1099px) {
   body header a { margin-left: 5px; } 
@@ -143,6 +173,12 @@ header.darken {
     width: 33%;
     margin-right: 4%;
     font-size: 14pt;
+  }
+  #brand-promise { padding: 50px; }
+  #testimonials img { width: 220px; }
+  .flex-container {
+    display: flex;
+    align-items: center;
   }
   .mobile-nav1 { display: none; }
   .side-nav li div { 

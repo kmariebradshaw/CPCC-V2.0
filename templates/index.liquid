@@ -3,11 +3,10 @@
   #atf-side  {
     width: 33%;
     max-width: 250px;
-    margin: 25px;
+    margin: 25px 25px 25px 0;
     padding: 20px;
     background: #0d5da3;
     float: right;
-    margin-right: 5%;
   }
   
 
@@ -46,7 +45,6 @@
     max-width: 300px;
     display: inline-block;
     float: right;
-    margin-right: 50px; 
   }
   
   .clearfix:after {
@@ -62,18 +60,10 @@
     font-size: 16pt;
   }
   
-  #testimonials div {
-    display: inline-block;
-    width: 44%;
+  #testimonials .flex-container div, #testimonials .flex-container-do div {
     margin: 20px;
     vertical-align: top; 
     text-align: left; 
-  }
-
-  #testimonials img {
-    float: left;
-    margin-right: 20px;
-    width: 45%;
   }
 
   table {
@@ -135,7 +125,7 @@
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: center; 
-    height: 500px;
+    height: 524px;
     overflow: hidden;
   }
 
@@ -200,7 +190,7 @@
     font-size: 70pt;
     color: #5e9ecd;
     position: absolute;
-    margin-left: 200px;
+    margin-left: 190px;
 }
 
   .circle { 
@@ -215,7 +205,6 @@
 
   .highlight { background: #5e9ecd; } 
   #middle-journey { margin-top: 70px; }
-  #final-journey { margin-top: 140px; } 
 </style>
 
 <section id="atf" class="clearfix">
@@ -285,79 +274,109 @@
    });
        
 </script>
-<section id="brand-promise" style="padding: 50px 0;">
-  <h1>"TREATING PROSTATE CANCER WITH A FOCUS ON QUALITY OF LIFE"</h1>
+<section id="brand-promise">
+  <h1>"TREATING PROSTATE CANCER WITH <br>A FOCUS ON QUALITY OF LIFE"</h1>
   
  <center> <iframe width="560" height="315" src="https://www.youtube.com/embed/DZAK4eXxGdE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </center> 
-  
 </section>
-   <div class="social">
-     <a href="https://www.facebook.com/ChicagoProstate"><img src="{{'fb-icon.png'| asset_url}}" class="soc-icon"/></a>
-     <a href="https://twitter.com/ChicagoProstate"><img src="{{'twitter-icon.png'| asset_url}}" class="soc-icon"/></a>
-     <a href="/blogs/news"><img src="{{'blog-icon.png'| asset_url}}" class="soc-icon"/></a>
-     <a href="https://www.youtube.com/user/ChicagoProstateCtr"><img src="{{'youtube-icon.png'| asset_url}}" class="soc-icon"/></a>
-  </div>
+ <div class="social">
+   <a href="https://www.facebook.com/ChicagoProstate"><img src="{{'fb-icon.png'| asset_url}}" class="soc-icon"/></a>
+   <a href="https://twitter.com/ChicagoProstate"><img src="{{'twitter-icon.png'| asset_url}}" class="soc-icon"/></a>
+   <a href="/blogs/news"><img src="{{'blog-icon.png'| asset_url}}" class="soc-icon"/></a>
+   <a href="https://www.youtube.com/user/ChicagoProstateCtr"><img src="{{'youtube-icon.png'| asset_url}}" class="soc-icon"/></a>
+</div>
 <section id="journey">
   <h1>Prostate Cancer Journey</h1>
-  <center>
-  <div class="info-box">
-    <div class="ar-journey" id="initial-journey">➡</div>
-    <h2>Early Signs and Symptoms</h2>
-    <p>In its early stages, prostate cancer may cause no symptoms. That's why regular testing is important for some men.</p>
-    <a href="/pages/prostate-cancer"  target="_blank" >Find out if you should be tested</a>
-  </div>
-   <div class="info-box">
-    <div class="ar-journey" id="middle-journey">➡</div>
-    <h2>Testing and Diagnosis</h2>
-    <p>A positive test result doesn't necessarily mean prostate cancer. Further testing can determine if it's cancer.</p>
-    <a href="/pages/diagnosis"  target="_blank" >What your test results mean</a>
-  </div>
-   <div class="info-box">
-    <div class="ar-journey" id="final-journey">➡</div>
-    <h2>Treatment <br> Options</h2>
-    <p>If you've been diagnosed with prostate cancer, choosing a course of treatment is a critical step.</p>
-    <a href="/pages/treatment-options"  target="_blank" >Get the facts and the latest research</a>
-  </div>
-   <div class="info-box">
-    <h2>Recovering from Prostate Cancer</h2>
-    <p>Congratulations! <br> You have completed your treatment! <br>But what is life like after prostate cancer?</p>
-    <a href="/pages/follow-up"  target="_blank" >What to expect after treatment</a>
+  <div class="info-wrapper">
+    <center>
+    <div class="info-box">
+      <div class="ar-journey" id="initial-journey"><img src="{{'arrow.png' | asset_url}}" />
+      </div>
+      <h2>Early Signs and Symptoms</h2>
+      <p>In its early stages, prostate cancer may cause no symptoms. That's why regular testing is important for some men.</p>
+      <a href="/pages/prostate-cancer"  target="_blank" >Find out if you should be tested</a>
     </div>
-  </center>
+     <div class="info-box">
+      <div class="ar-journey" id="middle-journey"><img src="{{'arrow.png' | asset_url}}" /></div>
+      <h2>Testing and Diagnosis</h2>
+      <p>A positive test result doesn't necessarily mean prostate cancer. Further testing can determine if it's cancer.</p>
+      <a href="/pages/diagnosis"  target="_blank" >What your test results mean</a>
+    </div>
+     <div class="info-box">
+      <div class="ar-journey" id="final-journey"><img src="{{'arrow.png' | asset_url}}" /></div>
+      <h2>Treatment <br> Options</h2>
+      <p>If you've been diagnosed with prostate cancer, choosing a course of treatment is a critical step.</p>
+      <a href="/pages/treatment-options"  target="_blank" >Get the facts and the latest research</a>
+    </div>
+     <div class="info-box">
+      <h2>Recovering from Prostate Cancer</h2>
+      <p>Congratulations! <br> You have completed your treatment! <br>But what is life like after prostate cancer?</p>
+      <a href="/pages/follow-up"  target="_blank" >What to expect after treatment</a>
+      </div>
+    </center>
+  </div>
 </section>
 
 <section id="testimonials">
   <h1 style="margin: 1px;">Patient Testimonials</h1>
   <h3>Don't just take our word for it.</h3>
   <center>
-  <div>
-     <a href="/pages/testimonials"><img src="{{'man1.jpg'|asset_url}}" /></a>
-    <p><b>"I was convinced I'd be making a terrible mistake by not visiting you."</b></p>
-    <p>"I have to admit that I was prepared to have the DaVinci Prostatectomy after speaking with my urologist. In fact, even before meeting with you I was seriously considering canceling my appointment (consultation) with you..."</p>
-    <p>-Dave A.<br>
-    <i>Plainfield, Illinois</i></p>
+  <div class="flex-container-do">
+    <div class="flex-container">
+      <div>
+        <a href="/pages/testimonials">
+          <img src="{{'man1.jpg'|asset_url}}" />
+        </a>
+      </div>
+      <div>
+        <p><b>"I was convinced I'd be making a terrible mistake by not visiting you."</b></p>
+        <p>"I have to admit that I was prepared to have the DaVinci Prostatectomy after speaking with my urologist. In fact, even before meeting with you I was seriously considering canceling my appointment (consultation) with you..."</p>
+        <p>-Dave A.<br>
+        <i>Plainfield, Illinois</i></p>
+      </div>
+    </div>
+    <div class="flex-container">
+      <div>
+        <a href="/pages/testimonials">
+          <img src="{{'man5.jpg'|asset_url}}" />
+        </a>
+      </div>
+      <div>
+        <p><b>"A very efficient operation at the Center."</b></p>
+        <p>"Good, intelligent people who are above average compared to most hospitals/medical centers."</p>
+        <p>-Robert H.<br>
+        <i>Albuquerque, New Mexico</i></p>
+      </div>
+    </div>
   </div>
-  <div>
-     <a href="/pages/testimonials"><img src="{{'man5.jpg'|asset_url}}" /></a>
-    <p><b>"A very efficient operation at the Center."</b></p>
-    <p>"Good, intelligent people who are above average compared to most hospitals/medical centers."</p>
-    <p>-Robert H.<br>
-    <i>Albuquerque, New Mexico</i></p>
+  <div class="flex-container-do">
+    <div class="flex-container">
+      <div>
+        <a href="/pages/testimonials">
+          <img src="{{'man6.jpeg'|asset_url}}" />
+        </a>
+      </div>
+      <div>
+        <p><b>"Thank you."</b></p>
+        <p>"Very pleased with the level of competence of the entire staff. I very much appreciated the professional and personal treatment I received."</p>
+        <p>-Herbert M.<br>
+        <i>Wheaton, Illinois</i></p>
+      </div>
+    </div>
+    <div class="flex-container">
+      <div>
+        <a href="/pages/testimonials">
+          <img src="{{'man4.jpg'|asset_url}}" />
+        </a>
+      </div>
+      <div>
+        <p><b>"Everything went better than I had imagined"</b></p>
+        <p>"Thanks to Dr. Moran and his entire staff for making everything so easy. Great instructions and information, they answered every question I had."</p>
+        <p>-Matthew D.<br>
+        <i>Schaumburg, Illinois</i></p>
+      </div>
+    </div> 
   </div>
-  <div>
-     <a href="/pages/testimonials"><img src="{{'man6.jpeg'|asset_url}}" /></a>
-    <p><b>"Thank you."</b></p>
-    <p>"Very pleased with the level of competence of the entire staff. I very much appreciated the professional and personal treatment I received."</p>
-    <p>-Herbert M.<br>
-    <i>Wheaton, Illinois</i></p>
-  </div>
-  <div>
-    <a href="/pages/testimonials"><img src="{{'man4.jpg'|asset_url}}" /></a>
-    <p><b>"Everything went better than I had imagined"</b></p>
-    <p>"Thanks to Dr. Moran and his entire staff for making everything so easy. Great instructions and information, they answered every question I had."</p>
-    <p>-Matthew D.<br>
-    <i>Schaumburg, Illinois</i></p>
-  </div> 
   </center>
 </section>
 
