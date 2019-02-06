@@ -62,18 +62,10 @@
     font-size: 16pt;
   }
   
-  #testimonials div {
-    display: inline-block;
-    width: 44%;
+  #testimonials .flex-container div, #testimonials .flex-container-do div {
     margin: 20px;
     vertical-align: top; 
     text-align: left; 
-  }
-
-  #testimonials img {
-    float: left;
-    margin-right: 20px;
-    width: 45%;
   }
 
   table {
@@ -135,7 +127,7 @@
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: center; 
-    height: 500px;
+    height: 524px;
     overflow: hidden;
   }
 
@@ -330,34 +322,62 @@
   <h1 style="margin: 1px;">Patient Testimonials</h1>
   <h3>Don't just take our word for it.</h3>
   <center>
-  <div>
-     <a href="/pages/testimonials"><img src="{{'man1.jpg'|asset_url}}" /></a>
-    <p><b>"I was convinced I'd be making a terrible mistake by not visiting you."</b></p>
-    <p>"I have to admit that I was prepared to have the DaVinci Prostatectomy after speaking with my urologist. In fact, even before meeting with you I was seriously considering canceling my appointment (consultation) with you..."</p>
-    <p>-Dave A.<br>
-    <i>Plainfield, Illinois</i></p>
+  <div class="flex-container-do">
+    <div class="flex-container">
+      <div>
+        <a href="/pages/testimonials">
+          <img src="{{'man1.jpg'|asset_url}}" />
+        </a>
+      </div>
+      <div>
+        <p><b>"I was convinced I'd be making a terrible mistake by not visiting you."</b></p>
+        <p>"I have to admit that I was prepared to have the DaVinci Prostatectomy after speaking with my urologist. In fact, even before meeting with you I was seriously considering canceling my appointment (consultation) with you..."</p>
+        <p>-Dave A.<br>
+        <i>Plainfield, Illinois</i></p>
+      </div>
+    </div>
+    <div class="flex-container">
+      <div>
+        <a href="/pages/testimonials">
+          <img src="{{'man5.jpg'|asset_url}}" />
+        </a>
+      </div>
+      <div>
+        <p><b>"A very efficient operation at the Center."</b></p>
+        <p>"Good, intelligent people who are above average compared to most hospitals/medical centers."</p>
+        <p>-Robert H.<br>
+        <i>Albuquerque, New Mexico</i></p>
+      </div>
+    </div>
   </div>
-  <div>
-     <a href="/pages/testimonials"><img src="{{'man5.jpg'|asset_url}}" /></a>
-    <p><b>"A very efficient operation at the Center."</b></p>
-    <p>"Good, intelligent people who are above average compared to most hospitals/medical centers."</p>
-    <p>-Robert H.<br>
-    <i>Albuquerque, New Mexico</i></p>
+  <div class="flex-container-do">
+    <div class="flex-container">
+      <div>
+        <a href="/pages/testimonials">
+          <img src="{{'man6.jpeg'|asset_url}}" />
+        </a>
+      </div>
+      <div>
+        <p><b>"Thank you."</b></p>
+        <p>"Very pleased with the level of competence of the entire staff. I very much appreciated the professional and personal treatment I received."</p>
+        <p>-Herbert M.<br>
+        <i>Wheaton, Illinois</i></p>
+      </div>
+    </div>
+    <div class="flex-container">
+      <div>
+        <a href="/pages/testimonials">
+          <img src="{{'man4.jpg'|asset_url}}" />
+        </a>
+      </div>
+      <div>
+        <p><b>"Everything went better than I had imagined"</b></p>
+        <p>"Thanks to Dr. Moran and his entire staff for making everything so easy. Great instructions and information, they answered every question I had."</p>
+        <p>-Matthew D.<br>
+        <i>Schaumburg, Illinois</i></p>
+      </div>
+    </div> 
   </div>
-  <div>
-     <a href="/pages/testimonials"><img src="{{'man6.jpeg'|asset_url}}" /></a>
-    <p><b>"Thank you."</b></p>
-    <p>"Very pleased with the level of competence of the entire staff. I very much appreciated the professional and personal treatment I received."</p>
-    <p>-Herbert M.<br>
-    <i>Wheaton, Illinois</i></p>
-  </div>
-  <div>
-    <a href="/pages/testimonials"><img src="{{'man4.jpg'|asset_url}}" /></a>
-    <p><b>"Everything went better than I had imagined"</b></p>
-    <p>"Thanks to Dr. Moran and his entire staff for making everything so easy. Great instructions and information, they answered every question I had."</p>
-    <p>-Matthew D.<br>
-    <i>Schaumburg, Illinois</i></p>
-  </div> 
   </center>
 </section>
 
