@@ -236,6 +236,10 @@ header.darken {
   #testimonials .flex-container div { width: 50%; }
 }
   #testimonials img { width: 220px; }
+  @media only screen and (min-width: 500px) and (max-width: 588px) {
+      #atf{  background-size: 200% !important;} 
+
+  }
 @media only screen and (max-width: 588px) {
     #testimonials h3 {font-size: 14pt; }
     #testimonials .flex-container div:first-of-type { text-align: center }
@@ -246,7 +250,10 @@ header.darken {
     display: inline-block;
     font-size: 10pt;
 }
-#atf { height: fit-content !important;  min-height: 350px;   background-position: right !important; 
+#atf {
+ height: fit-content !important;  
+ min-height: 350px; 
+    background-position: right !important;
 }
 #atf-side {
     width: 40%;
