@@ -43,24 +43,26 @@
     font-size: 8pt;
   }
 }
-
+iframe { max-width: 100%; }
 @media only screen and (max-width: 799px) {
   .page-content .do { display: none; }
   .side-nav {
     width: 100%;
     vertical-align: top;
     font-size: 10pt;
+    margin-top: 20px;
   } 
+  .appoint-side-nav h3 { margin-top: 17.5px !important; }
   .page-content { padding: 20px; }
   .rte ul, .rte ol { margin: 20px 0 !important;}
    .main-text {width: 100%; }
-   .appoint-side-nav { margin: 0 !important;}
+   .appoint-side-nav { margin: 20px 0 0 0 !important;}
   .section-header { 
     height: 200px;
     padding: 20px;
   }
   .site-header { padding: 0 !important; }
-  .side-nav li div { margin-top: -12pt;}
+  .side-nav li div { margin-top: -17pt;}
      #hamburger {
     right: 35px;
     top: 38%;
@@ -138,26 +140,28 @@ header.darken {
 @media only screen and (min-width: 800px) {
   .page-content .mo { display: none; }
   .side-nav {
-    width: 30%;
+    width: 33%;
     margin-right: 4%;
     font-size: 14pt;
   }
   .mobile-nav1 { display: none; }
   .side-nav li div { 
     text-align: right;
-    margin-top: -12%;
+    margin-top: -35px;
     margin-bottom: 10px;
     margin-right: 10px;
   }
  .main-text {
-    width: 65%;
+    width: 60%;
     padding-bottom: 50px; 
   }
   .section-header { 
     height: 30vh;
     padding: 50px;
   }
-  .rte ul, .rte ol, .appoint-side-nav { margin: 0 0 50px 35px;}
+  .appoint-side-nav h5 { margin-top: 17.5px !important; }
+  .appoint-side-nav p { font-size: 12pt; }
+  .rte ul, .rte ol, .appoint-side-nav {margin: 20px 0px 50px 0px;}
   .page-content { padding: 50px; }
   p {
     font-size: 14pt;
@@ -178,7 +182,7 @@ header.darken {
 }
 .main-text { display: inline-block; }
 .section-header {margin-bottom: 0px !important;}
-body main .rte li { list-style-position: inside !important; }
+body main .page-content ul li { list-style-position: inside !important; }
 .side-nav li div { text-align: right;}
 #hamburger {
   display: inline-block !important; 
