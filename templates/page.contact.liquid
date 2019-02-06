@@ -15,18 +15,17 @@
 <div class="section-header text-center contact-temp flex-container-no">
   <h1 class="fw">{{ page.title }}</h1>
 </div>
-<div class="rte page-content">
+<div class="page-content">
   <div class="side-nav do">
     <ul>
-     <a href="/pages/contact"><li class="btn-link">Contact<br>Us<div>▶</div> </li></a>
-      <a href="/pages/contact"><li class="btn-link">Request a<br>Brochure<div>▶</div> </li></a>
+     <a href="/pages/contact"><li class="btn-link">Contact Us / <br> Request a Brochure<div>▶</div> </li></a>
        <a href="{{'PSA.pdf' | asset_url}}" target="_blank"><li class="btn-link">Download <br>Informational Booklet<div>▶</div> </li></a>
       <a href="/pages/schedule"><li class="btn-link">Schedule an<br> Appointment<div>▶</div></li></a>
-      <a href="/pages/support"><li class="btn-link">Attend an Informational<br>Support Group<div>▶</div></li></a>
+      <a href="/pages/support"><li class="btn-link">Informational<br>Support Group<div>▶</div></li></a>
     </ul>
     <div class="appoint-side-nav">
-      <h3 style="margin-bottom:0;padding:10px;">Questions? Call us!</br>
-      (630) 654-2515</h3>
+      <h5 style="margin-top:0 !important;margin-bottom: 0;padding:10px;">Questions? Call us!</br>
+      (630) 654-2515</h5>
     </div>
   </div>
 	<div class="form-field-request">
@@ -75,7 +74,7 @@
             </div>
             
                 <div class="grid__item one-third">
-          <label for="AddressZipNew">{{ 'customer.addresses.zip' | t }}</label>
+          <label for="AddressZipNew">Zip Code</label>
           <input type="text" id="AddressZipNew" name="address[zip]" value="{{ form.zip }}" autocapitalize="characters">
         </div>
           </div>
