@@ -1,5 +1,11 @@
 @media only screen and (max-width: 400px) {
   .announcement-bar__message { font-size: 10pt !important;}
+    #brand-promise { font-size: 5pt; }
+
+}
+@media only screen and (min-width: 401px) and (max-width: 588px) {
+    #brand-promise { font-size: 7pt !important; }
+
 }
 #brand-promise + .social {
       width: 100%;
@@ -50,6 +56,34 @@
   }
 
 }
+@media only screen and (min-width: 680px) and (max-width: 799px) {
+  #journey .info-wrapper { max-width: 700px; margin: 0 auto; }
+  #initial-journey img, #final-journey { margin-top: 90px; }
+  #middle-journey  {
+    margin-left: -100px;
+    margin-top: 247px !important;
+    transform: rotate(-220deg);
+  }
+}
+@media only screen and (min-width: 680px) {
+   #journey {
+    padding: 50px; 
+  }
+}
+ @media only screen and (min-width: 589px) and (max-width: 679px){
+  #brand-promise { font-size: 11pt !important; }
+}
+@media only screen and (max-width: 679px) {
+  #journey .info-wrapper { max-width: 300px; margin: 0 auto; }
+.ar-journey {
+    font-size: 70pt;
+    color: #5e9ecd;
+    position: absolute;
+    margin-left: 29px !important;
+    margin-top: 250px !important;
+    transform: rotate(90deg);
+  }
+}
 @media only screen and (min-width: 450px) and (max-width: 749px) {
   .site-footer ul li a { font-size: 10pt; }
 }
@@ -71,6 +105,7 @@ iframe { max-width: 100%; }
     font-size: 10pt;
     margin-top: 20px;
   } 
+  #atf p { font-size: 10pt; }
   .appoint-side-nav h3 { margin-top: 17.5px !important; }
   .page-content { padding: 20px; }
   .rte ul, .rte ol { margin: 20px 0 !important;}
@@ -167,6 +202,70 @@ header.darken {
     margin-right: 5px;
   }
 }
+@media only screen and (min-width: 589px) and (max-width: 799px) {
+  .background-adjust { background-position: -150px !important;} 
+}
+@media only screen and (min-width: 589px) {
+  .flex-container {
+    display: flex;
+    align-items: center;
+  }
+   #atf-main {
+    width: 40%;
+    padding: 70px 20px 20px 20px;
+    max-width: 300px;
+    display: inline-block;
+    float: right;
+  }
+    #atf-side  {
+    width: 33%;
+    max-width: 250px;
+    margin: 25px 25px 25px 0;
+    padding: 20px;
+    background: #0d5da3;
+    float: right;
+  }
+  
+  #atf { 
+    height: 524px !important;
+        background-position: center; 
+
+  }
+  #atf-side { height: 474px; }
+  #testimonials h3 {font-size: 16pt; }
+  #testimonials .flex-container div { width: 50%; }
+}
+  #testimonials img { width: 220px; }
+  @media only screen and (min-width: 500px) and (max-width: 588px) {
+      #atf{  background-size: 200% !important;} 
+
+  }
+@media only screen and (max-width: 588px) {
+    #testimonials h3 {font-size: 14pt; }
+    #testimonials .flex-container div:first-of-type { text-align: center }
+#atf-main {
+    width: 50%;
+    padding: 35px 0px 25px 25px;
+    max-width: 300px;
+    display: inline-block;
+    font-size: 10pt;
+}
+#atf {
+ height: fit-content !important;  
+ min-height: 350px; 
+    background-position: right !important;
+}
+#atf-side {
+    width: 40%;
+    max-width: 250px;
+    margin: 25px 25px 25px 0;
+    padding: 10px;
+    background: #0d5da3;
+    float: right;
+}
+#atf-side p { font-size: 9pt; }
+.cta_text .btn { font-size: 10pt; }
+}
 @media only screen and (min-width: 800px) {
   .page-content .mo { display: none; }
   .side-nav {
@@ -175,11 +274,6 @@ header.darken {
     font-size: 14pt;
   }
   #brand-promise { padding: 50px; }
-  #testimonials img { width: 220px; }
-  .flex-container {
-    display: flex;
-    align-items: center;
-  }
   .mobile-nav1 { display: none; }
   .side-nav li div { 
     text-align: right;

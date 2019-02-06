@@ -1,14 +1,5 @@
 <style>
   footer { margin-top: -15px !important;}
-  #atf-side  {
-    width: 33%;
-    max-width: 250px;
-    margin: 25px 25px 25px 0;
-    padding: 20px;
-    background: #0d5da3;
-    float: right;
-  }
-  
 
    #ex-pop  {
    display: inline-block;
@@ -39,13 +30,7 @@
 
   #atf-side h5, #atf-side p { color: white; }
 
-  #atf-main {
-    width: 40%;
-    padding: 70px 20px 20px 20px;
-    max-width: 300px;
-    display: inline-block;
-    float: right;
-  }
+ 
   
   .clearfix:after {
   content: "";
@@ -57,11 +42,10 @@
   
   #testimonials h3 {
     font-weight: lighter;
-    font-size: 16pt;
   }
   
   #testimonials .flex-container div, #testimonials .flex-container-do div {
-    margin: 20px;
+    padding: 10px;
     vertical-align: top; 
     text-align: left; 
   }
@@ -112,7 +96,6 @@
   .info-box h2 { letter-spacing: normal !important; } 
   
   #journey {
-    padding: 50px; 
     width: 100%; 
     background: #0d5da3; 
   }
@@ -124,8 +107,6 @@
     box-shadow: 0px 15px 25px darkgrey;
     background-repeat: no-repeat; 
     background-size: cover; 
-    background-position: center; 
-    height: 524px;
     overflow: hidden;
   }
 
@@ -138,7 +119,7 @@
     float: left;
     margin-top: -85px;
 }
-  
+  #Table { background: white; }
   #atf h2 {
     font-weight: bolder;
     letter-spacing: normal;
@@ -162,7 +143,7 @@
     letter-spacing: normal;
   }
   
-  section:not(:first-of-type) { margin-top: 25px; } 
+  section:not(:first-of-type) { padding: 25px; } 
   
   th,td { 
     border: 2px solid white;
@@ -207,7 +188,7 @@
   #middle-journey { margin-top: 70px; }
 </style>
 
-<section id="atf" class="clearfix">
+<section id="atf" class="clearfix background-adjust">
   <div id="atf-side">
   <h5>Meet Dr. Moran</h5>
 	<p>Providing guidance for over 20,000 men over the last 20 years</p>
@@ -246,6 +227,7 @@
     var subCaption = $(this).attr('img-subcaption'); 
     $(this).addClass('highlight').siblings().removeClass('highlight');
     if (!$(this).hasClass('main-slide')){
+      $('#atf').removeClass('background-adjust')
       $('#atf').children().not('#sub-header-slides').hide(); 
 //       $("#sub-header-slides h2").empty().text(caption);
 //       $("#sub-header-slides h4").empty().text(subCaption);
@@ -253,12 +235,15 @@
     }
     else {
       $('#atf').children().not('#sub-header-slides').show(); 
+      $('#atf').addClass('background-adjust'); 
 //       $('#sub-header-slides').hide();
     }
     $('#atf').css("backgroundImage", "url(" + "'" + imageSource + "'" + ")"); 
   });
   
   $(document).ready(function() {
+    var height = $('#atf').height(); 
+    $('#atf').css("height", height)
     var y = 1 
     setInterval(function(){
     var atfSlide = "#slide" + y
@@ -272,7 +257,10 @@
 
     }, 50000)
    });
-       
+       $(window).on("resize", function() {
+          var height = $('#atf').height(); 
+    $('#atf').css("height", height)
+       })
 </script>
 <section id="brand-promise">
   <h1>"TREATING PROSTATE CANCER WITH <br>A FOCUS ON QUALITY OF LIFE"</h1>
