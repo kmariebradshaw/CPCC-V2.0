@@ -1,17 +1,49 @@
-@media only screen and (min-width: 750px) {
-body .medium-up--one-half {
-    width: 100%;
+@media only screen and (max-width: 400px) {
+  .announcement-bar__message { font-size: 10pt !important;}
 }
-  
+
+@media only screen and (min-width: 750px) {
+  .social { width: 33%;}
+  .social .btn-link  { margin-left: -30px; }
+  .site-footer ul {
+    max-width: 75%;
+    width: fit-content;
+  }
+  body .medium-up--one-half {
+    width: 100%;
+  }
   body .main-text {
     li { list-style: inherit !important; }
     a { text-decoration: underline !important; } 
   }
+  footer .page-width  {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
   body .site-header__icons { display: none !important; } 
-} 
-@media only screen and (max-width: 400px) {
-  .announcement-bar__message { font-size: 10pt !important;}
 }
+
+@media only screen and (max-width: 749px) {
+  #footer-main-content { width: 100% !important; }
+  .social { width: 100%;}
+  .site-footer__linklist-item { padding: 0 !important; }
+   .site-footer ul {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 450px) and (max-width: 749px) {
+  .site-footer ul li a { font-size: 10pt; }
+}
+@media only screen and (max-width: 449px) {
+  .page-width {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .site-footer ul li a {
+    font-size: 8pt;
+  }
+}
+
 @media only screen and (max-width: 799px) {
   .page-content .do { display: none; }
   .side-nav {
@@ -138,11 +170,6 @@ header.darken {
 .flex-container-no { 
   display: flex; 
   align-items: center;
-}
-
-footer .page-width  {
-    padding-left: 25px !important;
-    padding-right: 25px !important;
 }
 
 .side-nav {
@@ -419,8 +446,6 @@ body .site-footer {
 
 .site-footer ul {
     column-count: 2;
-    max-width: 75%;
-        width: fit-content;
     display: inline-block;
   li a { font-weight: 600; } 
 }
@@ -445,7 +470,6 @@ body .lightblue { background: #5e9ecd !important; }
 }
 
 .social {
-    width: 33%;
     display: inline-block;
     float: right;
   color: white; 

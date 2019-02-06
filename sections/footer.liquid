@@ -17,7 +17,7 @@
 
 <footer class="site-footer" role="contentinfo">
   <div class="page-width">
-    <div class="grid grid--no-gutters">
+    <div class="grid grid--no-gutters" id="footer-main-content">
       <div class="grid__item{% if section.settings.footer_newsletter_enable and section.settings.footer_linklist_two != blank %} medium-up--one-quarter{% elsif section.settings.footer_linklist_two == blank and section.settings.footer_newsletter_enable %} medium-up--one-half{% endif %}">
         <img src="{{'CPC-logo_white.png' | asset_url}}" id="footer-logo"/>
         {%- assign footer_linklist = section.settings.footer_linklist -%}
@@ -39,7 +39,7 @@
 
  
    <div class="social">
-     <a href="/pages/schedule" class="btn-link lightblue" style="margin-left: -15px;">Schedule an Appointment</a>
+     <a href="/pages/schedule" class="btn-link lightblue" >Schedule an Appointment</a>
      <a href="/pages/location"><p>815 Pasquinelli Dr.</br>
        Westmont, IL 60559</p>
      <p>(630) 654-2515</p></a>
