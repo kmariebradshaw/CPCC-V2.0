@@ -167,6 +167,20 @@ header.darken {
     margin-right: 5px;
   }
 }
+@media only screen and (min-width: 589px) {
+  .flex-container {
+    display: flex;
+    align-items: center;
+  }
+  #testimonials h3 {font-size: 16pt; }
+  #testimonials .flex-container div { width: 50%; }
+}
+  #testimonials img { width: 220px; }
+@media only screen and (max-width: 588px) {
+    #testimonials h3 {font-size: 14pt; }
+    #testimonials .flex-container div:first-of-type { text-align: center }
+
+}
 @media only screen and (min-width: 800px) {
   .page-content .mo { display: none; }
   .side-nav {
@@ -175,11 +189,6 @@ header.darken {
     font-size: 14pt;
   }
   #brand-promise { padding: 50px; }
-  #testimonials img { width: 220px; }
-  .flex-container {
-    display: flex;
-    align-items: center;
-  }
   .mobile-nav1 { display: none; }
   .side-nav li div { 
     text-align: right;
