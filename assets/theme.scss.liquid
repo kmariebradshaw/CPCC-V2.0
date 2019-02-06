@@ -43,18 +43,20 @@
     font-size: 8pt;
   }
 }
-
+iframe { max-width: 100%; }
 @media only screen and (max-width: 799px) {
   .page-content .do { display: none; }
   .side-nav {
     width: 100%;
     vertical-align: top;
     font-size: 10pt;
+    margin-top: 20px;
   } 
+  .appoint-side-nav h3 { margin-top: 17.5px !important; }
   .page-content { padding: 20px; }
   .rte ul, .rte ol { margin: 20px 0 !important;}
    .main-text {width: 100%; }
-   .appoint-side-nav { margin: 0 !important;}
+   .appoint-side-nav { margin: 20px 0 0 0 !important;}
   .section-header { 
     height: 200px;
     padding: 20px;
@@ -157,7 +159,9 @@ header.darken {
     height: 30vh;
     padding: 50px;
   }
-  .rte ul, .rte ol, .appoint-side-nav { margin: 0 0 50px 35px;}
+  .appoint-side-nav h5 { margin-top: 17.5px !important; }
+  .appoint-side-nav p { font-size: 12pt; }
+  .rte ul, .rte ol, .appoint-side-nav {margin: 20px 0px 50px 0px;}
   .page-content { padding: 50px; }
   p {
     font-size: 14pt;
