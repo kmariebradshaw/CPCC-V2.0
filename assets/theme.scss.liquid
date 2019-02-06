@@ -1,7 +1,10 @@
 @media only screen and (max-width: 400px) {
   .announcement-bar__message { font-size: 10pt !important;}
 }
-
+#brand-promise + .social {
+      width: 100%;
+    text-align: center;
+}
 @media only screen and (min-width: 750px) {
   .social { width: 33%;}
   .social .btn-link  { margin-left: -30px; }
@@ -23,6 +26,7 @@
   body .site-header__icons { display: none !important; } 
 }
 
+.ar-journey img { max-width: 100px; }
 @media only screen and (max-width: 749px) {
   #footer-main-content { width: 100% !important; }
   .social { width: 100%;}
@@ -30,6 +34,20 @@
    .site-footer ul {
     width: 100%;
   }
+}
+@media only screen and (min-width: 1200px) {
+    #final-journey { margin-top: 140px; } 
+
+}
+@media only screen and (min-width: 800px) and (max-width: 1199px) {
+  #journey .info-wrapper { max-width: 700px; margin: 0 auto; }
+  #initial-journey img, #final-journey { margin-top: 90px; }
+  #middle-journey  {
+    margin-left: -100px;
+    margin-top: 247px !important;
+    transform: rotate(-220deg);
+  }
+
 }
 @media only screen and (min-width: 450px) and (max-width: 749px) {
   .site-footer ul li a { font-size: 10pt; }
@@ -155,6 +173,7 @@ header.darken {
     margin-right: 4%;
     font-size: 14pt;
   }
+  #brand-promise { padding: 50px; }
   #testimonials img { width: 220px; }
   .flex-container {
     display: flex;
