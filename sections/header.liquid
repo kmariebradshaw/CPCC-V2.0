@@ -46,11 +46,14 @@
         {% for link in linklists.main-menu.links %}
           {% assign child_list_handle = link.title | handleize %}
           {% if linklists[child_list_handle].links != blank %}  
-            <li class="collection-prod">{{ link.title | escape }} <span>◯</span>           </li> 
-
+            <li class="collection-prod">{{ link.title | escape }} <span>◯</span></li> 
              <ul class="childlink accent-padding" style="display: none;">
               {% for childlink in linklists[child_list_handle].links %}
-                <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                {% if childlink.title == "Support Groups" %}
+                  <li><a href="{{'support.pdf' | asset_url}}" target="_blank">Support Group</a></li>
+                {% else %}
+                  <li><a href="{{ childlink.url }}">{{ childlink.title | escape }}</a></li>
+                {% endif %}
               {% endfor %}
              </ul>
           {% else %}
@@ -58,7 +61,6 @@
           {% endif %}
         {% endfor %}
       </ul>
-
       <style>
         .announcement-bar {
           background-color: {{ section.settings.color_bg }};
@@ -82,7 +84,7 @@
       </style>
   
         <div class="announcement-bar">
-        <p class="announcement-bar__message" style="margin: 0 auto;color: white;">Questions? Call Us at (630) 654-2515</p>
+        <p class="announcement-bar__message" style="margin: 0 auto;">Questions? Call Us at <a href="tel:1-640-654-2515" style="color:white;text-decoration: none;">(630) 654-2515</a></p>
       </div>
 
 
@@ -180,8 +182,7 @@
             <li><a href="/pages/events" class="main-nav">News & Events</a>
               <ul class="sub-nav-main">
                 <li><a href="/pages/events">Upcoming Events</a></li>
-                <li><a href="/pages/support">Support Groups</a></li>
-                <li><a href="/blogs/news">In the News & Blog</a></li>
+  <li><a href="{{'support.pdf' | asset_url}}" target="_blank">Support Groups</a></li>                <li><a href="/blogs/news">In the News & Blog</a></li>
               </ul>
             </li>
           </ul>
