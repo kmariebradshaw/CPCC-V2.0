@@ -194,13 +194,12 @@
 	<p>Providing guidance for over 20,000 men over the last 20 years</p>
 	<p>Research collaboration with Harvard Medical School, University of Maryland Cancer Center and Dana Farber Cancer Center</p>
 	<p>Dr. Moran is also the Medical Director of Radiation Oncology at DuPage Medical Group Cancer Center in Lisle, IL.</p>
- </div>
+ </div> 
   <div id="atf-main">
   <h2 id="atf-title">Straight Talk About Prostate Cancer</h2>
   <h4 id="atf-subtitle">"As a cancer survivor, I understand the initial shock and emotion of cancer. I'm here to help you learn about prostate cancer treatments and if seed implant is a good fit for you and your family."</h4>
   <h5 id="atf-intro">-Brian J. Moran, MD</h5>
   <p>Medical Director, <br>Chicago Prostate Cancer Center</p>
-    
    <div class="cta_text">
 	 <a href="/pages/prostate-cancer" class="a_cta"><button class="btn">Learn More</button></a>
    </div>
@@ -208,12 +207,17 @@
 
   <div id="sub-header-slides" style="display: none;"><h2></h2><h4></h4></div>
 </div>
+    <div id="slide-2-text" style="display: none;">   
+    <h2 class="accent tac ttu nmb">Chicago Prostate Cancer Center<br>Joins DuPage Medical Group</h2>
+    <h4 class=" tac">We are excited to join the DuPage Medical Group healthcare family.</h4>
+    <h5 class="ttu tac">April 1, 2019</h5>
+  </div>
 </section>
 <div>  
   
   <center>
     <div class="circle highlight main-slide" id="slide1" img-source="//cdn.shopify.com/s/files/1/2316/0095/t/1/assets/CPC-Home-Image.jpg?7844792783149817079"></div>
-    <div class="circle" id="slide2" img-source="//cdn.shopify.com/s/files/1/2316/0095/t/3/assets/JoinDMG_Header.jpg?29" img-caption="Welcome to the Chicago Prostate Cancer Center" img-subcaption="A One-Time, Outpatient, Minimally Surgical Prostate Cancer Treatment"></div> 
+    <div class="circle slide2" id="slide2" img-source="//cdn.shopify.com/s/files/1/2316/0095/t/1/assets/building.jpg?17545526770728315187" img-caption="Welcome to the Chicago Prostate Cancer Center" img-subcaption="A One-Time, Outpatient, Minimally Surgical Prostate Cancer Treatment"></div> 
     <div class="circle" id="slide3" img-source="//cdn.shopify.com/s/files/1/2316/0095/t/1/assets/reception.jpg?7845200647143113927" img-caption="Compassion, Quality, Expertise, and Commitment" img-subcaption="See why our minimally-invasive surgical treatment may be your best option"></div>
     <div class="circle" id="slide4" img-source="//cdn.shopify.com/s/files/1/2316/0095/t/1/assets/center.jpg?16301856489799910333" img-caption="Commitment" img-subcaption="Our entire team includes physicians, physicists, nurses, radiology technologists, and insurance experts. Our goal is to provide our patients with comprehensive care from consultation through follow up support. "></div>
   </center>
@@ -231,11 +235,20 @@
 //       $("#sub-header-slides h2").empty().text(caption);
 //       $("#sub-header-slides h4").empty().text(subCaption);
 //       $('#sub-header-slides').show();
+    if ($(this).hasClass('slide2')) {
+      $('#slide-2-text').show(); 
     }
     else {
-      $('#atf').children().not('#sub-header-slides').show(); 
+      $('#slide-2-text').hide(); 
+    }
+
+    }
+     else {
+      $('#atf').children().not('#sub-header-slides').not('#slide-2-text').show(); 
       $('#atf').addClass('background-adjust'); 
 //       $('#sub-header-slides').hide();
+      $('#slide-2-text').hide(); 
+
     }
     $('#atf').css("backgroundImage", "url(" + "'" + imageSource + "'" + ")"); 
   });
